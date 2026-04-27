@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لاكي هوم | Lucky Home</title>
+    <style>
+        /* إعدادات الخطوط والألوان */
+        :root {
+            --primary: #2563eb;
+            --secondary: #f8fafc;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        /* شريط التنقل العلوي */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links span {
+            margin: 0 15px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        /* واجهة الترحيب (Hero Section) */
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .hero h1 { margin: 0; font-size: 2.5rem; }
+        .hero p { opacity: 0.9; margin-top: 10px; }
+
+        /* شبكة المنتجات */
+        .shop-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* تصميم بطاقة المنتج البرمجية */
+        .item-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .item-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* بديل الصورة (أيقونة كبيرة بالـ CSS) */
+        .item-icon {
+            width: 100%;
+            height: 150px;
+            background: #f1f5f9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .add-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--dark);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .add-btn:hover {
+            background: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🏠 لاكي هوم</div>
+        <div class="nav-links">
+            <span>الرئيسية</span>
+            <span>الأقسام</span>
+            <span>🛒 السلة</span>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>شاشة متجر "لاكي هوم"</h1>
+        <p>تصفح أحدث قطع الأثاث والديكور لمنزلك العصري</p>
+    </div>
+
+    <div class="shop-container">
+        <div class="item-card">
+            <div class="item-icon">🛋️</div>
+            <h3>كنبة مخمل زرقاء</h3>
+            <div class="price">1,200 درهم</div>
+            <button class="add-btn">أضف إلى السلة</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">🪑</div>
+            <h3>كرسي طاولة طعام</h3>
+            <div class="price">350 درهم</div>
+            <button class="add-btn">أضف إلى السلة</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">💡</div>
+            <h3>مصباح مكتبي ذكي</h3>
+            <div class="price">120 درهم</div>
+            <button class="add-btn">أضف إلى السلة</button>
+        </div>
+
+        <div class="item-card">
+            <div class="item-icon">🖼️</div>
+            <h3>لوحة جدارية مودرن</h3>
+            <div class="price">85 درهم</div>
+            <button class="add-btn">أضف إلى السلة</button>
+        </div>
+    </div>
+
+    <footer>
+        حقوق النشر محفوظة لمتجر لاكي هوم &copy; 2026 | مبرمج بواسطة Lucky Home Team
+    </footer>
+
+</body>
+</html>
